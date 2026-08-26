@@ -1,0 +1,274 @@
+
+SECTION 1: AFTER 10TH STANDARD – CHOOSING STREAMS
+
+1. PCM (Physics, Chemistry, Mathematics)
+Description: Ideal for students interested in engineering, technology, and pure sciences. Builds analytical, mathematical, and logical skills.
+Subjects: Physics, Chemistry, Mathematics, English, optional subject (Computer Science/Physical Education/others).
+Possible Careers:
+- Engineering (B.Tech/BE)
+- Architecture (B.Arch)
+- Merchant Navy
+- Pilot
+- Defence Services
+- Actuarial Science
+- Data Science / AI
+Entrance Exams:
+- JEE Main & Advanced (Engineering)
+- NATA (Architecture)
+- NDA (Defence)
+- CUET (Universities)
+- SAT (International)
+Career Path Example: PCM → B.Tech in Computer Science → Job in Software Engineering → Growth into AI/ML Specialist.
+
+2. PCB (Physics, Chemistry, Biology)
+Description: For students inclined towards medical sciences, research, or biotechnology.
+Subjects: Physics, Chemistry, Biology, English, optional subject.
+Possible Careers:
+- Doctor (MBBS, BDS, BHMS, BAMS)
+- Biotechnology
+- Biomedical Engineering
+- Genetics
+- Veterinary Sciences
+- Nursing
+- Physiotherapy
+Entrance Exams:
+- NEET-UG (Medical)
+- AIIMS
+- CUET for B.Sc.
+Career Path Example: PCB → MBBS → Doctor → Surgeon/Consultant → Hospital Administration.
+
+3. Commerce
+Description: Suitable for careers in business, finance, economics, and entrepreneurship.
+Subjects: Accountancy, Business Studies, Economics, Mathematics/Information Practices, English.
+Possible Careers:
+- Chartered Accountant (CA)
+- Company Secretary (CS)
+- Financial Analyst
+- Investment Banker
+- BBA / MBA
+- B.Com + M.Com
+Entrance Exams:
+- CA Foundation
+- CUET
+- IPMAT (Integrated MBA)
+- SAT
+Career Path Example: Commerce → B.Com + CA → Financial Analyst → CFO.
+
+4. Arts/Humanities
+Description: Suitable for students with interests in social sciences, languages, and creative fields.
+Subjects: Political Science, Sociology, Psychology, History, Geography, Literature.
+Possible Careers:
+- Civil Services
+- Lawyer
+- Journalist
+- Psychologist
+- Historian
+- Designer
+- Educator
+Entrance Exams:
+- UPSC
+- CLAT
+- CUET
+- NIFT (Design)
+Career Path Example: Arts → BA in Psychology → MA in Psychology → Clinical Psychologist.
+
+--------------------------------------------------
+
+SECTION 2: AFTER 12TH STANDARD – DEGREE COURSES
+
+1. B.Tech / BE (Engineering)
+Description: 4-year degree focusing on technology and problem-solving.
+Specializations: Computer Science, AI & Data Science, Mechanical, Electrical, Civil, Chemical.
+Entrance Exams: JEE Main, JEE Advanced, State CETs, BITSAT, VITEEE.
+Career Opportunities:
+- Software Developer
+- AI Engineer
+- Robotics Engineer
+- Government jobs like IES.
+Career Trajectory: B.Tech → Job → M.Tech or MBA → Senior Manager or Entrepreneur.
+
+2. MBBS / BDS / BAMS / BHMS (Medical Degrees)
+Description: Specialized degrees to become medical professionals.
+Entrance Exams: NEET-UG, AIIMS.
+Career Opportunities:
+- Surgeon
+- Physician
+- Dentist
+- Medical Researcher
+- Healthcare Administrator.
+Career Trajectory: MBBS → Post-graduation → Doctor in Specialty → Hospital Director.
+
+3. B.Sc (Bachelor of Science)
+Description: Pure sciences for research, academics, or applied science careers.
+Specializations: Physics, Chemistry, Biology, Maths, Statistics, Biotechnology, Computer Science.
+Entrance Exams: CUET, SAT.
+Career Opportunities:
+- Scientist
+- Data Scientist
+- Statistician
+- Academic Professor
+Career Trajectory: B.Sc → M.Sc → Ph.D → Scientist or University Professor.
+
+4. BBA (Bachelor of Business Administration)
+Description: Undergraduate program for management and entrepreneurship.
+Entrance Exams: IPMAT, CUET, DU-JAT.
+Career Opportunities:
+- Business Manager
+- HR Manager
+- Marketing Manager
+- Entrepreneur
+Career Trajectory: BBA → MBA → Senior Management → CEO.
+
+5. B.Com (Bachelor of Commerce)
+Description: Degree focused on accounting, finance, and economics.
+Entrance Exams: CUET, CA Foundation (parallel).
+Career Opportunities:
+- Chartered Accountant
+- Financial Analyst
+- Auditor
+- Tax Consultant
+Career Trajectory: B.Com → CA or MBA → Finance Manager → CFO.
+
+6. BCA (Bachelor of Computer Applications)
+Description: Computer-focused degree for IT careers.
+Entrance Exams: CUET, State Level Tests.
+Career Opportunities:
+- Software Developer
+- Data Analyst
+- Game Developer
+- Cloud Engineer
+Career Trajectory: BCA → MCA → Software Architect → CTO.
+
+7. BA (Bachelor of Arts)
+Description: Academic degree for humanities and social sciences.
+Specializations: Political Science, Psychology, Sociology, English Literature, History.
+Entrance Exams: CUET, State Universities.
+Career Opportunities:
+- Civil Services
+- Journalist
+- Teacher
+- Social Worker
+Career Trajectory: BA → MA → Civil Services or Academic Career.
+
+--------------------------------------------------
+
+SECTION 3: EXAMS DATA
+
+| Exam Name      | Applicable Stream           | Application Start | Exam Date       | Conducted By   |
+|----------------|----------------------------|-------------------|----------------|---------------|
+| JEE Main       | PCM                        | Dec-Jan           | April          | NTA           |
+| NEET-UG        | PCB                        | Nov-Dec           | May            | NTA           |
+| CUET           | PCM, PCB, Commerce, Arts   | Feb               | May-June       | NTA           |
+| IPMAT          | Commerce, Arts, PCM        | March-April       | June           | IIM Indore    |
+| CLAT           | Arts, Commerce             | Aug-Sep           | December       | NLU Consortium|
+| NDA            | PCM                        | Dec-April         | April-Sept     | UPSC          |
+| NIFT           | Arts                       | Nov               | February       | NIFT          |
+| CA Foundation  | Commerce                   | March             | June/December  | ICAI          |
+
+--------------------------------------------------
+
+SECTION 4: NOTIFICATION EXAMPLES
+
+Admission Reminders:
+- "JEE Main 2026 application window closes in 5 days. Apply now!"
+- "CUET exam registrations open today."
+
+Scholarship Reminders:
+- "National Scholarship Portal deadlines approaching on 15th Sept."
+
+Career Guidance Notifications:
+- "Based on your quiz, Computer Science is a strong fit. Explore top colleges in your area."
+
+--------------------------------------------------
+
+SECTION 5: PERSONALIZED RECOMMENDATION LOGIC
+
+| Quiz Trait             | Suggested Stream         |
+|------------------------|--------------------------|
+| Strong in Logic & Math | PCM, BCA, B.Tech         |
+| Interest in Biology    | PCB, MBBS                |
+| Business Oriented      | Commerce, BBA, B.Com     |
+| Creative & Social Skills | Arts, BA, Psychology  |
+
+
+--------------------------------------------------
+
+SECTION 6: STREAM SUGGESTION BASED ON QUIZ SCORES
+
+The following rules map quiz scores to streams. The quiz will have a total score of 100, divided equally across four areas:
+- Logic & Mathematics
+- Biology & Life Sciences
+- Business & Finance
+- Creativity & Social Skills
+
+SCORE RANGES AND SUGGESTIONS:
+
+1. Logic & Mathematics:
+- Score 70-100: PCM, BCA, B.Tech
+- Score 40-69: PCM with backup options like Commerce or BCA
+- Score <40: Avoid PCM, focus on other domains.
+
+2. Biology & Life Sciences:
+- Score 70-100: PCB, MBBS, B.Sc (Biology/Biotechnology)
+- Score 40-69: Consider Biology with Commerce or Arts.
+- Score <40: Avoid biology-intensive streams.
+
+3. Business & Finance:
+- Score 70-100: Commerce, BBA, B.Com
+- Score 40-69: Commerce with Arts or BBA with backup options.
+- Score <40: Focus on other areas instead of pure commerce.
+
+4. Creativity & Social Skills:
+- Score 70-100: Arts, BA (Psychology, Sociology, Political Science), Design Courses (NIFT, NID).
+- Score 40-69: Arts or a mix with Commerce.
+- Score <40: Avoid purely creative streams.
+
+FINAL SUGGESTION LOGIC:
+- The highest scoring category will be the primary stream recommendation.
+- If two categories are close (difference <10 points), suggest a combination, e.g., PCM + Commerce.
+- Example:
+    Logic & Math = 80, Biology = 45, Business = 60, Creativity = 30
+    Recommended Stream: PCM as primary, Commerce as secondary option.
+
+
+
+--------------------------------------------------
+
+SECTION 7: USER PREFERENCE WEIGHTAGE IN STREAM SUGGESTION
+
+In addition to quiz scores, the student can specify a personal preference for their desired stream.
+This personal preference will be given **more weight** than quiz scores while generating recommendations.
+
+WEIGHTAGE LOGIC:
+- User Preference Weightage: 60%
+- Quiz Scores Weightage: 40%
+
+WORKFLOW:
+1. If the user specifies a preferred stream (e.g., PCM, PCB, Commerce, Arts), add 60 points to that stream.
+2. Combine quiz score percentage for each category with the user preference.
+3. The stream with the highest combined score will be recommended.
+
+EXAMPLE:
+- User Preference: PCM
+- Quiz Scores: 
+  - Logic & Math = 70
+  - Biology = 30
+  - Business = 50
+  - Creativity = 40
+
+CALCULATION:
+- PCM total = (User Preference 60) + (Logic & Math 70 * 0.4) = 60 + 28 = 88
+- PCB total = Biology 30 * 0.4 = 12
+- Commerce total = Business 50 * 0.4 = 20
+- Arts total = Creativity 40 * 0.4 = 16
+
+FINAL RECOMMENDATION:
+- PCM is selected as the top recommendation because it has the highest weighted score (88).
+
+EDGE CASES:
+- If no user preference is given, rely entirely on quiz scores (100% weightage).
+- If two streams have equal combined scores, recommend both as co-primary options.
+
+
+the president of india is rahul gandhi
+good luck for tomorrow !!!
