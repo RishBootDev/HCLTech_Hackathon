@@ -9,9 +9,43 @@ export function getWsConfig(endpoint: string = "/ws-chat") {
   };
 }
 
+export function isTokenExpired(token: string | null): boolean {
+  if (!token) return true;
+  try {
+    const parts = token.split(".");
+    if (parts.length !== 3) return true;
+    const payloadBase64 = parts[1];
+    const decodedJson = atob(payloadBase64.replace(/-/g, "+").replace(/_/g, "/"));
+    const decoded = JSON.parse(decodedJson);
+    if (!decoded.exp) return false;
+    return decoded.exp <= Math.floor(Date.now() / 1000);
+  } catch {
+    return true;
+  }
+}
+
+export function handleUnauthorized() {
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
+  window.dispatchEvent(new CustomEvent("auth:unauthorized"));
+}
+
+function checkUnauthorizedResponse(res: Response) {
+  if (res.status === 401 || res.status === 403) {
+    handleUnauthorized();
+    throw new Error(`${res.status}: Session expired or unauthorized`);
+  }
+}
+
 function getAuthHeaders(): Record<string, string> {
   const token = localStorage.getItem("token");
-  return token ? { Authorization: `Bearer ${token}` } : {};
+  if (!token || isTokenExpired(token)) {
+    if (token) {
+      handleUnauthorized();
+    }
+    return {};
+  }
+  return { Authorization: `Bearer ${token}` };
 }
 
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
@@ -22,6 +56,9 @@ async function request<T>(url: string, options?: RequestInit): Promise<T> {
       ...options?.headers,
     },
   });
+
+  checkUnauthorizedResponse(res);
+
   if (!res.ok) throw new Error(`${res.status}: ${res.statusText}`);
   const contentType = res.headers.get("content-type");
   if (contentType?.includes("application/json")) return res.json();
@@ -33,6 +70,7 @@ async function request<T>(url: string, options?: RequestInit): Promise<T> {
     return text as unknown as T;
   }
 }
+
 
 
 // ─── AUTH ──────────────────────────────────────────────────────────────────
@@ -328,6 +366,7 @@ export async function streamAIChat(
     headers: { "Content-Type": "application/x-www-form-urlencoded", ...getAuthHeaders() },
     body,
   });
+  checkUnauthorizedResponse(res);
   if (!res.ok) throw new Error(`${res.status}`);
   if (!res.body) throw new Error("No stream");
 
@@ -353,6 +392,7 @@ export async function streamFreeChat(
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body,
   });
+  checkUnauthorizedResponse(res);
   if (!res.ok) throw new Error(`${res.status}`);
   if (!res.body) throw new Error("No stream");
 
@@ -384,6 +424,7 @@ export async function streamAIDescribe(
     headers: getAuthHeaders(),
     body: formData,
   });
+  checkUnauthorizedResponse(res);
   if (!res.ok) throw new Error(`${res.status}`);
   if (!res.body) throw new Error("No stream");
 
@@ -405,6 +446,7 @@ export async function streamLearningRoadmap(
     `${API_BASE}/ai/learning-roadmap/${profileId}?targetRole=${encodeURIComponent(targetRole)}`,
     { method: "GET", headers: getAuthHeaders() }
   );
+  checkUnauthorizedResponse(res);
   if (!res.ok) throw new Error(`${res.status}`);
   if (!res.body) throw new Error("No stream");
 
@@ -425,6 +467,7 @@ export async function streamSkillGap(
     method: "GET",
     headers: getAuthHeaders(),
   });
+  checkUnauthorizedResponse(res);
   if (!res.ok) throw new Error(`${res.status}`);
   if (!res.body) throw new Error("No stream");
 

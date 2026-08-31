@@ -1,4 +1,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { isTokenExpired } from "@/lib/api";
+import { toast } from "sonner";
 
 interface User {
   id: number;
@@ -22,19 +24,25 @@ const AuthContext = createContext<AuthContextType | null>(null);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(() => {
+    const savedToken = localStorage.getItem("token");
     const savedUser = localStorage.getItem("user");
+    if (!savedToken || isTokenExpired(savedToken)) {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      return null;
+    }
     return savedUser ? JSON.parse(savedUser) : null;
   });
-  const [token, setToken] = useState<string | null>(() => localStorage.getItem("token"));
 
-  // useEffect removed as state is now initialized synchronously from localStorage
-
-  const login = (newToken: string, newUser: User) => {
-    localStorage.setItem("token", newToken);
-    localStorage.setItem("user", JSON.stringify(newUser));
-    setToken(newToken);
-    setUser(newUser);
-  };
+  const [token, setToken] = useState<string | null>(() => {
+    const savedToken = localStorage.getItem("token");
+    if (!savedToken || isTokenExpired(savedToken)) {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      return null;
+    }
+    return savedToken;
+  });
 
   const logout = () => {
     localStorage.removeItem("token");
@@ -44,8 +52,29 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(null);
   };
 
+  useEffect(() => {
+    const handleUnauthorizedEvent = () => {
+      logout();
+      toast.error("Session expired. Please log in again.");
+    };
+
+    window.addEventListener("auth:unauthorized", handleUnauthorizedEvent);
+    return () => {
+      window.removeEventListener("auth:unauthorized", handleUnauthorizedEvent);
+    };
+  }, []);
+
+  const login = (newToken: string, newUser: User) => {
+    localStorage.setItem("token", newToken);
+    localStorage.setItem("user", JSON.stringify(newUser));
+    setToken(newToken);
+    setUser(newUser);
+  };
+
+  const isLoggedIn = !!user && !!token && !isTokenExpired(token);
+
   return (
-    <AuthContext.Provider value={{ user, token, login, logout, isLoggedIn: !!user }}>
+    <AuthContext.Provider value={{ user, token, login, logout, isLoggedIn }}>
       {children}
     </AuthContext.Provider>
   );
