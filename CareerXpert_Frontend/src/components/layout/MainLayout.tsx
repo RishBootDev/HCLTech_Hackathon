@@ -1,6 +1,6 @@
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
-import { profileApi } from "@/lib/api";
+import { profileApi, getWsConfig } from "@/lib/api";
 import {
   LayoutDashboard,
   BookOpen,
@@ -53,9 +53,10 @@ export default function MainLayout({ children }: MainLayoutProps) {
 
   useEffect(() => {
     if (user?.userId) {
+      const { brokerURL, sockJsURL } = getWsConfig("/ws-chat");
       const client = new Client({
-        brokerURL: "ws://localhost:2030/ws-chat",
-        webSocketFactory: () => new SockJS("http://localhost:2030/ws-chat"),
+        brokerURL,
+        webSocketFactory: () => new SockJS(sockJsURL),
         connectHeaders: {
           userId: user.userId.toString(),
         },

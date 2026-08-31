@@ -1,4 +1,13 @@
-const API_BASE = "http://localhost:2030";
+export const API_BASE = (import.meta.env.VITE_API_BASE_URL || "http://localhost:2030").replace(/\/+$/, "");
+
+export function getWsConfig(endpoint: string = "/ws-chat") {
+  const isSecure = API_BASE.startsWith("https://");
+  const hostAndPath = API_BASE.replace(/^https?:\/\//, "");
+  return {
+    brokerURL: `${isSecure ? "wss" : "ws"}://${hostAndPath}${endpoint}`,
+    sockJsURL: `${API_BASE}${endpoint}`,
+  };
+}
 
 function getAuthHeaders(): Record<string, string> {
   const token = localStorage.getItem("token");
@@ -24,6 +33,7 @@ async function request<T>(url: string, options?: RequestInit): Promise<T> {
     return text as unknown as T;
   }
 }
+
 
 // ─── AUTH ──────────────────────────────────────────────────────────────────
 export const authApi = {

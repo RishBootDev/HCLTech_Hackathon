@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
-import { humanChatApi, mentorApi, profileApi } from "@/lib/api";
+import { humanChatApi, mentorApi, profileApi, getWsConfig } from "@/lib/api";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import { 
@@ -127,9 +127,10 @@ export default function MentorChat() {
   }, [recipient?.userId]);
 
   const connect = (recipientUserId: number) => {
+    const { brokerURL, sockJsURL } = getWsConfig("/ws-chat");
     const client = new Client({
-      brokerURL: "ws://localhost:2030/ws-chat",
-      webSocketFactory: () => new SockJS("http://localhost:2030/ws-chat"),
+      brokerURL,
+      webSocketFactory: () => new SockJS(sockJsURL),
       connectHeaders: {
         userId: user?.userId?.toString() || ""
       },
